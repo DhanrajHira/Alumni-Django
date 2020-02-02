@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Records</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class='navbar-brand'>Alumni Records</a>
+        <ul class='navbar-nav'>
+            <li class='nav-item'>
+                <a class='nav-link' href="/"> Search</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href="/allrecords"> All Records</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href="/add"> Add Record</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href="/delete"> Delete Record</a>
+            </li>
+        </ul>
+    </nav>
+    <div class='container p-5'>
+        <div class='row'>
+            {% for record in results %}
+            <div class='col-4'>
+                <div class='card'>
+                    <div class='card-body'>
+                        <h4 class='card-title'>
+                            {{record.name}}
+                        </h4>
+                        <h5 class='card-subtitle mb-2 text-muted'>
+                            Admin Number : {{record.adminno}}
+                        </h5>
+                        <div class='card-text'>
+                            Father's Name : {{record.fathersname}}
+                        </div>
+                        <div class='card-text'>
+                            Mother's Name : {{record.mothersname}}
+                        </div>
+                        <div class='card-text'>
+                            Age : {{record.age}}
+                        </div>
+                        <div class='card-text'>
+                            Class : {{record.class}}
+                        </div>
+                        <div class='card-text'>
+                            Gender : {{record.gender}}
+                        </div>
+                        <div class='card-text'>
+                            House : {{record.house}}
+                        </div>
+                        <div class='card-text'>
+                            Admission Year : {{record.adminyear}}
+                        </div>
+                        <div class='card-text'>
+                            Address : {{record.address}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

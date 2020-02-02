@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Add Records</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class='navbar-brand'>Alumni Records</a>
+		<ul class='navbar-nav'>
+			<li class='nav-item'>
+				<a class='nav-link' href="/"> Search</a>
+			</li>
+			<li class='nav-item'>
+				<a class='nav-link' href="/allrecords"> All Records</a>
+			</li>
+			<li class='nav-item'>
+				<a class='nav-link' href="/add"> Add Record</a>
+			</li>
+			<li class='nav-item'>
+				<a class='nav-link' href="/delete"> Delete Record</a>
+			</li>
+		</ul>
+	</nav>
+	<div class='container m-5 '>
+		<div class='row align-items-center'>
+			<div class='col-4 self-align-center'>
+				<h1>Add record details</h1>
+			</div>
+		</div>
+		<FORM action='#' , method='post'>
+			{% csrf_token %}
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Name</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='name'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Admission Number</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='adminno'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Father's Name</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='fathersname'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Mother's Name</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='mothersname'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Class</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='class'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Phone Number</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='phonenumber'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Age</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='age'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Gender</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='gender'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">House</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='house'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Admission Year</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='adminyear'>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-5 col-form-label text-center">Address</label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" name='address'>
+				</div>
+			</div>
+			<div class='container m-5'>
+				<div class='row'>
+					<div class='col text-center'>
+						<input type="submit" class='btn btn-success'>
+					</div>
+				</div>
+			</div>
+			</FROM>
+	</div>
+</body>
+
+</html>

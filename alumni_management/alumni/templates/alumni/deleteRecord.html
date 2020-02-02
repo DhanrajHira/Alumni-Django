@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Record</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class='navbar-brand'>Alumni Records</a>
+        <ul class='navbar-nav'>
+            <li class='nav-item'>
+                <a class='nav-link' href="/"> Search</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href="/allrecords"> All Records</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href="/add"> Add Record</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link' href="/delete"> Delete Record</a>
+            </li>
+        </ul>
+    </nav>
+    <div class='row align-items-center'>
+        <div class='col-4'></div>
+        <div class='col-4 align-self-center'>
+            <div class='card p-3'>
+                <h4 class='card-title'>
+                    Enter the admission number of the record to delete
+                </h4>
+                <form method='post'>
+                    {% csrf_token %}
+                    <div class='container p-4'>
+                        <input type="text" class='form-control' name='deleteadminno'>
+                    </div>
+                    <div class='row align-items-center'>
+                        <div class='col-4'></div>
+                        <div class='col-4 align-self-center'>
+                            <input type='submit' class="btn btn-danger btn-lg">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
